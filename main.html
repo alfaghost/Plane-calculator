@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FSM | Calculator</title>
+	<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+</head>
+<body>
+
+	<nav>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="#!">Первое приближение</a></li>
+			<li><a href="#!">Второе приближение</a></li>
+		</ul>
+		<ul id="slide-out" class="side-nav">
+			<li><a href="#!">Первое приближение</a></li>
+			<li><a href="#!">Второе приближение</a></li>
+		</ul>
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	</nav>
+	<div class="container">
+	<div class="row">
+		<div class="col s4 m4">
+			<div class="card">
+				<div class="card-content">
+					<form action="#">
+					<p>Относительные массы</p>
+						<div class="range-field" id="range">
+							<label for="range1">Конструкции</label>
+							<input type="range" id="range1" min="0" max="100" />
+						</div>
+						<div class="range-field">
+							<label for="range2">Силовой установки</label>
+							<input type="range" id="range2" min="0" max="100" />
+						</div>
+						<div class="range-field">
+							<label for="range3">Оборудования и управления</label>
+							<input type="range" id="range3" min="0" max="100" />
+						</div>
+						<div class="range-field">
+							<label for="range4">Топлива</label>
+							<input type="range" id="range4" min="0" max="100" />
+						</div>
+					</form>
+				</div>
+				<div class="card-action">
+					
+					<form action="#">
+						<p>Абсолютные массы</p>
+						<label for="text1">Целевой и служебной нагрузки</label>
+						<input type="number" min="1"/>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col s4 m4">
+			<div class="card">
+				<div class="card-content">
+					<form action="#">
+						<p>Крейсерские показатели</p>
+						<label for="text2">Дальность полета, км</label>
+						<input type="number" min="1"/>
+						<label for="text3">Высота полета, км</label>
+						<input type="number" min="1"/>
+						<label for="text3">Аэродинамическое качество</label>
+						<input type="number" min="1"/>
+
+					</form>
+				</div>
+				<div class="card-action">
+					<form action="#">
+						<p>Скорость</p>
+						<div class="row">
+							<input class="col s7 validate" type ="number" min="1"/>
+							<select class="col s5">
+								<option value="1">Число Маха</option>
+								<option value="2">Км/ч</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col s4 m4">
+			<div class="card">
+				<div class="card-content">
+					<form action="#">
+						<label for="text2">Удельный расход топлива, даН/Ч</label>
+						<input type="number" min="1"/>
+						<label for="text3">Скорость захода на посадку, м/с</label>
+						<input type="number" min="1"/>
+						<label for="text3">Вертикальная скорость, м/с</label>
+						<input type="number" min="1"/>
+						<label for="text2">Скоростной напор, даН/м2</label>
+						<input type="number" min="1"/>
+						<label for="text3">Длина разбега, м</label>
+						<input type="number" min="1"/>
+						<label for="text3">Допустимая перегрузка, g</label>
+						<input type="number" min="1"/>
+						<label for="text2">Количество двигателей</label>
+						<input type="number" min="1"/>
+						<label for="text3">Коэффициент трения при взлете</label>
+						<input type="number" min="1"/>
+						<label for="text3">Коэффициент лобового сопротивления</label>
+						<input type="number" min="1"/>
+						<label for="text2">максимальное аэродинамиеское качество</label>
+						<input type="number" min="1"/>
+						<label for="text3">аэродинамическое качество при взлете</label>
+						<input type="number" min="1"/>
+						<label for="text3">Аэродинамическое качество при наборе высоты</label>
+						<input type="number" min="1"/>
+					</form>
+				</div>
+				<div class="card-action">
+					<a href="#">This is a link</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+		$(".button-collapse").sideNav();
+		$(document).ready(function() {
+    			$('select').material_select();
+ 		 });
+	</script>
+</body>
+</html>
