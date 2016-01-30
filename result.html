@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FSM | Calculator</title>
+	<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+</head>
+<body class="blue-grey lighten-5">
+	<nav  class="deep-purple lighten-2">
+		<!-- Сюда ссылки на следущую лабу -->
+		<div class="container">
+			<a href="#" class="brand-logo">Расчет параметров самолета</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#!">Первое приближение</a></li>
+				<li><a href="#!">Второе приближение</a></li>
+			</ul>
+		</div>
+		<ul id="slide-out" class="side-nav">
+			<li><a href="#!">Первое приближение</a></li>
+			<li><a href="#!">Второе приближение</a></li>
+		</ul>
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	</nav>
+	<!--  Повводить необходимые айдишники-->
+	<div class="container">
+		
+
+		<table >
+			<thead>
+				<tr >
+					<th data-field="id" >
+						Результаты расчетов
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Name</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Тяговооруженность из условия<br>обеспечения горизонтального полета</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Тяговооруженность из условия<br>обеспечения заданной длинны разбега</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Тяговооруженность из условия заданной<br> скороподъемности</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Тяговооруженность из условия заданной <br>максимальной скорости на заданной высоте</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Тяговооруженность из условий полета с заданной<br> установившейся эксплуатационной перегрузкой</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Максимальная тяговооруженность</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Масса в первом приближении</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Площадь крыла</th>
+					<td><число></td>
+				</tr>
+				<tr>
+					<th data-field="id">Вздетная тяга двигателей</th>
+					<td><число></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class=" center-align">
+			<a href="main.html" class="btn waves-effect waves-light light-blue darken-1"  name="action" id="">Back</a>
+			<button class="btn waves-effect waves-dark light-green accent-"  name="action" id="">Save</button>
+		</div>
+	</div>
+
+	<footer class="page-footer deep-purple lighten-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Лабораторная работа №2</h5>
+					<p class="grey-text text-lighten-4">Выполнили: Галанов Н.А., Хлопин Е.Н.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+					
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© ХАИ 2016
+				<a class="grey-text text-lighten-4 right" href="#!">гр 146</a>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		$(".button-collapse").sideNav();
+		$(document).ready(function() {
+    			$('select').material_select();
+ 		 });
+	</script>
+</body>
+</html>
