@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FSM | Calculator</title>
+	<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+</head>
+<body class="blue-grey lighten-5">
+	<nav  class="deep-purple lighten-2">
+		<!-- Сюда ссылки на следущую лабу -->
+		<div class="container">
+			<a href="#" class="brand-logo">Расчет параметров самолета</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="main.html">Первое приближение</a></li>
+				<li><a href="second.html">Второе приближение</a></li>
+			</ul>
+		</div>
+		<ul id="slide-out" class="side-nav">
+			<li><a href="main.html">Первое приближение</a></li>
+			<li><a href="second.html">Второе приближение</a></li>
+		</ul>
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	</nav>
+	<!--  Повводить необходимые айдишники-->
+	<div class="container">
+		<ul class="collapsible" data-collapsible="expandable">
+			<li>
+		      <div class="collapsible-header">Крыло</div>
+		      <div class="collapsible-body">
+		      	<div class="container">
+		      		<div>
+		      			<label for="var1">Механизация</label>
+			      		<select id="var1">
+									<option value="1">Отсутствует</option>
+									<option value="2">Щитки/Однощелевые шарнирные закрылки</option>
+									<option value="3">Закрылки Фулера и предкрылки перед элеронами</option>
+								</select>
+		      		</div>
+		      		
+		      		<div>
+		      			<label for="var2">Конструкция</label>
+			      		<select id="var2">
+									<option value="1">Монолитные элементы и сотовые конструкции</option>
+									<option value="2">Клееклепаная/Ограниченное приминение монолитных силовых элементов</option>
+									<option value="3">Клепанная конструкция</option>
+								</select>
+		      		</div>
+							
+		      		<div>
+		      			<label for="var3">Тип крыла</label>
+			      		<select id="var3">
+									<option value="1">Однолонжеронное/Трехлонжеронное/Кесонное</option>
+									<option value="2">Двухлонеронное</option>
+								</select>
+		      		</div>
+
+		      		<div class="col s3">
+		      			<label for="var4">Основной материал</label>
+			      		<select id="var4">
+									<option value="1">Д-16</option>
+									<option value="2">АМГ 6</option>
+								</select>
+		      		</div>
+
+		      		<div class="row">
+			      		<div class="col s2">
+			      			<label for="text3">Удлинение</label>
+									<input type="number" min="1" id="var5"/>
+			      		</div>
+			      		<div class="col s2">
+			      			<label for="text3">Площадь, м<sup>2</sup></label>
+									<input type="number" min="1" id="var6"/>
+			      		</div>
+			      		<div class="col s2">
+			      			<label for="text3">Сужение</label>
+									<input type="number" min="1" id="var7"/>
+			      		</div>
+			      		<div class="col s3">
+			      			<label for="text3">Стреловидность, <sup>o</sup></label>
+									<input type="number" min="1" id="var8"/>
+			      		</div>
+			      		<div class="col s3">
+			      			<label for="text3">Толщина у фюзеляжа</label>
+									<input type="number" min="1" id="var9"/>
+			      		</div>
+		      		</div>
+
+
+		      	</div>
+		      </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Силовая установка</div>
+		      <div class="collapsible-body">
+		      	<div class="container">
+		      		<div>
+		      			<label for="var10">Тип двигателя</label>
+			      		<select id="var10">
+									<option value="1">ТРД</option>
+									<option value="2">ТВД</option>
+									<option value="3">ПД</option>
+								</select>
+		      		</div>
+		      		
+							
+		      		<div>
+		      			<label for="var11">Расположение двигателей</label>
+			      		<select id="var11">
+									<option value="1">На крыле</option>
+									<option value="2">На фюзеляже</option>
+								</select>
+		      		</div>
+
+		      		
+
+		      		<div class="row">
+			      		<div class="col s4">
+			      			<label for="var12">Количество двигателей</label>
+									<input type="number" min="1" id="var12"/>
+			      		</div>
+			      		
+			      		<div class="col s4">
+			      			<label for="var13">Степень двухконтурности</label>
+									<input type="number" min="1" id="var13"/>
+			      		</div>
+			      		<div class="col s4">
+			      			<label for="text3">Взлетная тяга двигателя</label>
+									<input type="number" min="1" id="var14"/>
+			      		</div>
+			      	</div>
+			      	<div class="row">
+			      		
+			      		<div class="col s6">
+			      			<label for="text3">Степень повышения давления в компресоре</label>
+									<input type="number" min="1" id="var15"/>
+			      		</div>
+		      			<div class="col s6">
+			      			<label for="text3">Количество двигателей с реверсом тяги</label>
+									<input type="number" min="0" id="var16"/>
+			      		</div>
+		      		</div>
+
+		      		<div>
+			      		<input type="checkbox" class="filled-in" id="var17" checked="checked" />
+	      				<label for="filled-in-box">Форсажные камеры</label>
+		      		</div>
+		      	</div>
+		      </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Фюзеляж</div>
+		      <div class="collapsible-body">
+		      <div class="container">
+		      	<div class="row">
+		      		<div class="col s6">
+				      	<label for="text3">Длина фюзеляжа, м</label>
+								<input type="number" min="1" id="var17"/>
+		      		</div>
+		      		<div class="col s6">
+				      	<label for="text3">Перепад давления в кабине, даН/см<sup>2</sup></label>
+								<input type="number" min="1" id="var18"/>
+		      		</div>
+		      	</div>
+		      </div>
+		      </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Оперение</div>
+		      <div class="collapsible-body">
+		      <div class="container">
+      			<label for="text3">Площадь оперения, м<sup>2</sup></label>
+						<input type="number" min="1" id="var19"/>
+		      </div>
+		      </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Шасси</div>
+		      <div class="collapsible-body">
+		      	<div class="container">
+		      		<div class="col s3">
+		      			<label for="material">Материал основных стоек</label>
+			      		<select id="var20">
+									<option value="1">Сталь средней удельной прочности (30ХГСА)</option>
+									<option value="2">Металл высокой удельной прочности (30ХГСНА, ВТ-20, ВТ-22)</option>
+								</select>
+		      		</div>
+		      		<div class="col s3">
+		      			<label for="material">Обтекатели</label>
+			      		<select id="var21">
+									<option value="1">Отсутствуют</option>
+									<option value="2">На колесах неубиращегося шасси</option>
+									<option value="3">На фзеляже</option>
+								</select>
+		      		</div>
+
+		      		<div class="col s3">
+		      			<label for="material">Пневматики</label>
+			      		<select id="var22">
+									<option value="1">С обычными камерами</option>
+									<option value="2">Бескамерные</option>
+								</select>
+		      		</div>
+
+		      		<div class="row">
+			      		<div class="col s6">
+			      			<label for="text3">Высота шасси, м</label>
+									<input type="number" min="0.1" id="var23"/>
+			      		</div>
+			      		<div class="col s6">
+			      			<label for="text3">Давление в пневматиках, даН/см<sup>2</sup></label>
+									<input type="number" min="0" id="var24"/>
+			      		</div>
+			      		
+		      		</div>
+		      	</div>
+		      	
+		      </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Прочее</div>
+		      <div class="collapsible-body">
+		      	<div class="container">
+		      		<div class="row">
+		      			<div class="col s6">
+					      	<label for="text3">Взлетная масса, кг</label>
+									<input type="number" min="1" id="var25"/>
+			      		</div>
+			      		<div class="col s6">
+					      	<label for="text3">Крейсерская скорость, км/ч</label>
+									<input type="number" min="1" id="var26"/>
+			      		</div>
+		      		</div>
+
+		      		<div class="row">
+		      			<div class="col s6">
+					      	<label for="text3">Масса целевой нагрузки, кг</label>
+									<input type="number" min="1" id="var27"/>
+			      		</div>
+			      		<div class="col s6">
+					      	<label for="text3">Дальность полета, км</label>
+									<input type="number" min="1" id="var28"/>
+			      		</div>
+		      		</div>
+
+		      		<div class="row">
+		      			<div class="col s6">
+					      	<label for="text3">Расчетная перегрузка</label>
+									<input type="number" min="1" id="var29"/>
+			      		</div>
+			      		<div class="col s6">
+					      	<label for="text3">Высота полета, км</label>
+									<input type="number" min="1" id="var30"/>
+			      		</div>
+		      		</div>
+
+		      		<div class="row">
+		      			<div class="col s6">
+					      	<label for="text3">Крейсерское качество</label>
+									<input type="number" min="1" id="var31"/>
+			      		</div>
+			      		<div class="col s6">
+					      	<label for="text3">Удельный расход топлива, даН/кг*ч</label>
+									<input type="number" min="1" id="var32"/>
+			      		</div>
+		      		</div>
+
+		      		<div class="row">
+		      			<div class="switch center-align">
+							    <label>
+							      Неманевренный
+							      <input type="checkbox" id="var33">
+							      <span class="lever"></span>
+							      Маневренный
+							    </label>
+							  </div>
+		      		</div>
+		      	</div>
+		      </div>
+		    </li>
+		</ul>	
+		<div class=" center-align">
+			<a class="btn waves-effect waves-light light-blue darken-1" type="submit" name="action" id="" href="second_result.html">Launch
+    				<i class="material-icons right">send</i>
+  		</a>
+		</div>		
+	</div>
+	<footer class="page-footer deep-purple lighten-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Лабораторная работа №2</h5>
+					<p class="grey-text text-lighten-4">Выполнили: Галанов Н.А., Хлопин Е.Н.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+					
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© ХАИ 2016
+				<a class="grey-text text-lighten-4 right" href="#!">гр 146</a>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		$(".button-collapse").sideNav();
+		$(document).ready(function() {
+    			$('select').material_select();
+ 		 });
+	</script>
+</body>
+</html>
